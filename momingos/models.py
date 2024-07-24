@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+class RawData(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    edad = models.DateField()
+
+
+class DatosTransformados(models.Model):
+    nombre_completo = models.CharField(max_length=100)
+    edad_nominal = models.IntegerField()
+
+   
